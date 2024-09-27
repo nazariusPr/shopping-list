@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "images/book.jpg",
+    "name": "Book",
+    "count": 10,
+    "size": { "width": 15, "height": 20 },
+    "weight": "0.5kg",
+    "comments": [
+      {
+        "id": 1,
+        "productId": 1,
+        "description": "Great read, highly recommended!",
+        "date": "2023-01-15T00:00:00Z"
+      },
+      {
+        "id": 2,
+        "productId": 1,
+        "description": "The story was engaging and well-written.",
+        "date": "2023-02-10T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "imageUrl": "images/computer.jpg",
+    "name": "Computer",
+    "count": 5,
+    "size": { "width": 50, "height": 30 },
+    "weight": "5kg",
+    "comments": [
+      {
+        "id": 3,
+        "productId": 2,
+        "description": "Excellent performance for gaming and work.",
+        "date": "2023-03-01T00:00:00Z"
+      },
+      {
+        "id": 4,
+        "productId": 2,
+        "description": "A bit expensive, but worth it.",
+        "date": "2023-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "imageUrl": "images/banana.jpg",
+    "name": "Banana",
+    "count": 100,
+    "size": { "width": 2, "height": 10 },
+    "weight": "0.2kg",
+    "comments": []
+  },
+  {
+    "id": 4,
+    "imageUrl": "images/car.jpg",
+    "name": "Car",
+    "count": 1,
+    "size": { "width": 200, "height": 150 },
+    "weight": "1500kg",
+    "comments": [
+      {
+        "id": 7,
+        "productId": 4,
+        "description": "Smooth ride and great fuel efficiency.",
+        "date": "2023-05-12T00:00:00Z"
+      },
+      {
+        "id": 8,
+        "productId": 4,
+        "description": "Loved the design and comfort.",
+        "date": "2023-05-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "imageUrl": "images/computer.jpg",
+    "name": "Laptop",
+    "count": 8,
+    "size": { "width": 35, "height": 25 },
+    "weight": "2kg",
+    "comments": [
+      {
+        "id": 9,
+        "productId": 5,
+        "description": "Portable and powerful. Perfect for work.",
+        "date": "2023-06-08T00:00:00Z"
+      },
+      {
+        "id": 10,
+        "productId": 5,
+        "description": "Battery life could be better, but overall great laptop.",
+        "date": "2023-06-15T00:00:00Z"
+      }
+    ]
+  }
+]
