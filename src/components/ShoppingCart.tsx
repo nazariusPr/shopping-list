@@ -2,7 +2,7 @@ import { Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContex";
 import { CartItem } from "./CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
-import storeItems from "../data/storeItems.json";
+import storeItems from "../data/storeItems";
 
 type ShoppingCartProps = {
   isOpen: boolean;

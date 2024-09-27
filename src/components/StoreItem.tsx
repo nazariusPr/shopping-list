@@ -34,8 +34,8 @@ function StoreItem({ id, name, price, imageUrl }: StoreItemProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
-              + Add to Cart
+            <Button className="w-100" onClick={() => {}}>
+              Add to Cart
             </Button>
           ) : (
             <div

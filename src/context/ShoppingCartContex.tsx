@@ -1,6 +1,7 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { findProductById } from "../utilities/productUtils";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
@@ -47,12 +48,16 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
 
   function increaseCartQuantity(id: number) {
+    const product = findProductById(id);
+    if (product.count === 0) return;
+
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id) == null) {
         return [...currItems, { id, quantity: 1 }];
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
+            product.count--;
             return { ...item, quantity: item.quantity + 1 };
           } else {
             return item;
@@ -63,12 +68,16 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
 
   function decreaseCartQuantity(id: number) {
+    const product = findProductById(id);
+
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id)?.quantity === 1) {
+        product.count++;
         return currItems.filter((item) => item.id !== id);
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
+            product.count++;
             return { ...item, quantity: item.quantity - 1 };
           } else {
             return item;
