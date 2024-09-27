@@ -6,6 +6,7 @@
     "count": 10,
     "size": { "width": 15, "height": 20 },
     "weight": "0.5kg",
+    "price": 10.99,
     "comments": [
       {
         "id": 1,
@@ -28,6 +29,7 @@
     "count": 5,
     "size": { "width": 50, "height": 30 },
     "weight": "5kg",
+    "price": 1110,
     "comments": [
       {
         "id": 3,
@@ -50,6 +52,7 @@
     "count": 100,
     "size": { "width": 2, "height": 10 },
     "weight": "0.2kg",
+    "price": 1.05,
     "comments": []
   },
   {
@@ -59,6 +62,7 @@
     "count": 1,
     "size": { "width": 200, "height": 150 },
     "weight": "1500kg",
+    "price": 12000,
     "comments": [
       {
         "id": 7,
@@ -81,6 +85,7 @@
     "count": 8,
     "size": { "width": 35, "height": 25 },
     "weight": "2kg",
+    "price": 1210,
     "comments": [
       {
         "id": 9,
