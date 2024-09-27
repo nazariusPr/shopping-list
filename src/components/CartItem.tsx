@@ -10,7 +10,7 @@ type CartItemProps = {
   quantity: number;
 };
 
-export function CartItem({ id, quantity }: CartItemProps) {
+function CartItem({ id, quantity }: CartItemProps) {
   const { removeFromCart } = useShoppingCart();
   const item = storeItems.find((i) => i.id === id);
   const [showDeleteModal, setShowDeleteModal] = useState<boolean>(false);
@@ -67,3 +67,5 @@ export function CartItem({ id, quantity }: CartItemProps) {
     </>
   );
 }
+
+export default CartItem;

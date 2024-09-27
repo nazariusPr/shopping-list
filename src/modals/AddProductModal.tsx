@@ -24,6 +24,7 @@ function AddProductModal({
 
   const handleSubmit = () => {
     handleAddProduct(productId, count);
+    setCount(1);
     handleClose();
   };
 

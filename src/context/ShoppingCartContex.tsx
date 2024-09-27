@@ -2,14 +2,10 @@ import { ReactNode, createContext, useContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { findProductById } from "../utilities/productUtils";
+import { CartItem } from "../types/CartTypes";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
-};
-
-type CartItem = {
-  id: number;
-  quantity: number;
 };
 
 type ShoppingCartContext = {
