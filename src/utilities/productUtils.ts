@@ -7,3 +7,7 @@ export const findProductById = (id: number): Product => {
 
   return product;
 };
+
+export const getCountOfProduct = (id: number): number => {
+  return findProductById(id).count;
+};

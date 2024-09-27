@@ -1,7 +1,7 @@
 import { Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContex";
 import { CartItem } from "./CartItem";
-import { formatCurrency } from "../utilities/formatCurrency";
+import { formatCurrency } from "../utilities/formatter";
 import storeItems from "../data/storeItems";
 
 type ShoppingCartProps = {
@@ -13,7 +13,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Cart</Offcanvas.Title>
+        <Offcanvas.Title></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>

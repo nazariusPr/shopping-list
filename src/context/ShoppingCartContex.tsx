@@ -47,18 +47,19 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
 
-  function increaseCartQuantity(id: number) {
+  function increaseCartQuantity(id: number, count: number = 1) {
     const product = findProductById(id);
-    if (product.count === 0) return;
+    if (product.count === 0 || product.count < count) return;
 
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id) == null) {
-        return [...currItems, { id, quantity: 1 }];
+        product.count -= count;
+        return [...currItems, { id, quantity: count }];
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
-            product.count--;
-            return { ...item, quantity: item.quantity + 1 };
+            product.count -= count;
+            return { ...item, quantity: item.quantity + count };
           } else {
             return item;
           }
@@ -88,8 +89,16 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
 
   function removeFromCart(id: number) {
+    const product = findProductById(id);
+
     setCartItems((currItems) => {
-      return currItems.filter((item) => item.id !== id);
+      return currItems.filter((item) => {
+        const isFound = item.id === id;
+        if (isFound) {
+          product.count += item.quantity;
+        }
+        return !isFound;
+      });
     });
   }
 

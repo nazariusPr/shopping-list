@@ -18,5 +18,5 @@ export type Product = {
   count: number;
   size: Size;
   weight: string;
-  comments?: Comment[];
+  comments: Comment[];
 };
